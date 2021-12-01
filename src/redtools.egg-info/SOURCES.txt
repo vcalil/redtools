@@ -2,7 +2,8 @@ LICENSE
 README.md
 pyproject.toml
 setup.cfg
-setup.py
+src/redtools/__init__.py
+src/redtools/functions.py
 src/redtools.egg-info/PKG-INFO
 src/redtools.egg-info/SOURCES.txt
 src/redtools.egg-info/dependency_links.txt
