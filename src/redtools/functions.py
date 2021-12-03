@@ -51,7 +51,7 @@ def _calculaDVPF(numeroCPF,formatacao):
     return "%d%d%d%d%d%d%d%d%d%d%d%d%d%d" % tuple(numeroCPF)
 
 def gerarNumerosPF(quantidadeCPFs, formatacao, estado):
-  nomeDoArquivo = str(quantidadeCNPJs)+'_CNPJs_' +'.txt'
+  nomeDoArquivo = str(quantidadeCPFs)+'_CPFs_' +'.txt'
   arquivo = open(nomeDoArquivo, 'w')
 
   for integer in range(int(quantidadeCNPJs)):
