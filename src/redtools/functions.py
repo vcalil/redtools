@@ -58,7 +58,7 @@ def gerarNumerosPF(quantidadeCPFs, formatacao, estado):
     numeroCPF = [random.randrange(10) for i in range(8)] 
     if estado == 'SP':
       numeroCPF += [8]
-    else if estado == 'RJ':
+    elif estado == 'RJ':
       numeroCPF += [9]
     arquivo.write(_calculaDVPJ(numeroCPF,formatacao)+'\n')
 
