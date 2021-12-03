@@ -60,6 +60,6 @@ def gerarNumerosPF(quantidadeCPFs, formatacao, estado):
       numeroCPF += [8]
     elif estado == 'RJ':
       numeroCPF += [9]
-    arquivo.write(_calculaDVPJ(numeroCPF,formatacao)+'\n')
+    arquivo.write(_calculaDVPF(numeroCPF,formatacao)+'\n')
 
   arquivo.close()
