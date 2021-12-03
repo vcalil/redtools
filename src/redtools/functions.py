@@ -54,7 +54,7 @@ def gerarNumerosPF(quantidadeCPFs, formatacao, estado):
   nomeDoArquivo = str(quantidadeCPFs)+'_CPFs_' +'.txt'
   arquivo = open(nomeDoArquivo, 'w')
 
-  for integer in range(int(quantidadeCNPJs)):
+  for integer in range(int(quantidadeCPFs)):
     numeroCPF = [random.randrange(10) for i in range(8)] 
     if estado == 'SP':
       numeroCPF += [8]
