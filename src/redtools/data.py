@@ -41,7 +41,7 @@ class GenerateData:
 		arquivo14 = open('Email_Wordlist.txt', 'a')
 		arquivo15 = open('Password_Wordlist.txt', 'a')
 
-		for count in range(100):
+		for count in range(quantidade):
 		    print("[+]Creating the Fake People ...")
 		    r = requests.get(url,headers=my_headers,proxies=proxies,verify=False)
 		    file = bs.BeautifulSoup(r.content, "lxml")
