@@ -9,6 +9,8 @@ import time
 import urllib3
 
 class GenerateData:
+	def __init__(self):
+    		self.data = []
 
 	def geraPersona(quantidade):
 		urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
