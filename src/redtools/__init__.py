@@ -1,2 +1,2 @@
-from .functions import gerarNumerosPF
+from redtools import functions
 from redtools import GenerateData
