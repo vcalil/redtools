@@ -1,1 +1,1 @@
-from redtools import functions
+from .functions import gerarNumerosPF
