@@ -3,7 +3,9 @@ import json
 
 
 class RedPlayer:
-
+	def __init__(self):
+    		self.data = []
+    		
 	def readJSON(rota):
 		with open(rota) as f:
 			jsonFile = json.load(f)
