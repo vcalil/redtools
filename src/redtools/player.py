@@ -1,6 +1,8 @@
 import requests
 import json
+import urllib3
 
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class RedPlayer:
 	def __init__(self):
@@ -15,15 +17,17 @@ class RedPlayer:
 	def getRequest(self, url, headers, data, variables):
 		response = requests.get(url, headers=headers, data=data, verify=False)
 		jsonResponseContent = json.loads(response.content)
-		for count in range(variables):
-			myVariables[count] = jsonResponseContent[variables[count]]
+		myVariables = []
+    	for count in range(len(variables)):
+        	myVariables.append(jsonResponseContent[variables[count]])
 			
 		return myVariables
 
 	def postRequest(self, url, headers, data, variables):
 		response = requests.post(url, headers=headers, data=data, verify=False)
 		jsonResponseContent = json.loads(response.content)
-		for count in range(variables):
-			myVariables[count] = jsonResponseContent[variables[count]]
+		myVariables = []
+    	for count in range(len(variables)):
+        	myVariables.append(jsonResponseContent[variables[count]])
 		
 		return myVariables
