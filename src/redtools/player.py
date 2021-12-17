@@ -17,17 +17,23 @@ class RedPlayer:
 	def getRequest(self, url, headers, data, variables):
 		response = requests.get(url, headers=headers, data=data, verify=False)
 		jsonResponseContent = json.loads(response.content)
-		myVariables = []
-		for count in range(len(variables)):
-			myVariables.append(jsonResponseContent[variables[count]])
+		if variables != null:
+			myVariables = []
+			for count in range(len(variables)):
+				myVariables.append(jsonResponseContent[variables[count]])
 
-		return myVariables
+			return myVariables
+
+		return null
 
 	def postRequest(self, url, headers, data, variables):
 		response = requests.post(url, headers=headers, data=data, verify=False)
 		jsonResponseContent = json.loads(response.content)
-		myVariables = []
-		for count in range(len(variables)):
-			myVariables.append(jsonResponseContent[variables[count]])
+		if variables != null:
+			myVariables = []
+			for count in range(len(variables)):
+				myVariables.append(jsonResponseContent[variables[count]])
 
-		return myVariables
+			return myVariables
+
+		return null
